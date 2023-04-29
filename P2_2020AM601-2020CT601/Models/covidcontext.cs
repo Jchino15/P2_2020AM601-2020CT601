@@ -10,7 +10,6 @@ namespace P2_2020AM601_2020CT601.Models
         { }
         public DbSet<Departamentos> Departamentos { get; set; }
         public DbSet<Generos> Generos { get; set; }
-
         public DbSet<casosReportados> casosReportados { get;set; }
     }
 }

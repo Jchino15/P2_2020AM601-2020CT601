@@ -1,0 +1,48 @@
+﻿@model P2_2020AM601_2020CT601.Models.casosReportados
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>casosReportados</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.numCasosconfirmados)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.numCasosconfirmados)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.numCasosrecuperados)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.numCasosrecuperados)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.numCasosfallecidos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.numCasosfallecidos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Idgenero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Idgenero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Iddepartamento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Iddepartamento)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdCasosconfirmados">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
