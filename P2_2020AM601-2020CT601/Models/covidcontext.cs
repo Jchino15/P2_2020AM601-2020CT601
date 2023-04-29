@@ -7,7 +7,7 @@ namespace P2_2020AM601_2020CT601.Models
     {
         public covidcontext(DbContextOptions options): base(options)
         { }
-        public DbSet<P2_2020AM601_2020CT601.Models.Departamentos>? Departamentos { get; set; }
-        public DbSet<P2_2020AM601_2020CT601.Models.Generos>? Generos { get; set; }
+        public DbSet<Departamentos> Departamentos { get; set; }
+        public DbSet<Generos> Generos { get; set; }
     }
 }
