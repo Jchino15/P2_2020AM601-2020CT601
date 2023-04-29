@@ -7,6 +7,12 @@ namespace P2_2020AM601_2020CT601.Controllers
     public class equiposController : Controller
     {
         private readonly covidcontext? _covidcontext;
+
+        public equiposController(covidcontext covidcontext)
+        {
+            _covidcontext = covidcontext;
+        }
+
         public IActionResult Index()
         {
             var listadoDepartamentos = (from d in _covidcontext.Departamentos select d).ToList();
