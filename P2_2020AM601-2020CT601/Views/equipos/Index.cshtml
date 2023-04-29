@@ -12,5 +12,6 @@
 </div>
 
 @{
-    IEnumerable<string> strlist = new List<string>{""}
+    IEnumerable<string> strlist = new List<string> { "Ahuachapán, Cabañas, Chalatenango, Cuscatlán, La Libertad, La Paz, La Unión, Morazán, San Miguel, San Salvador, San Vicente, Santa Ana, Sonsonate, Usulután" };
 }
+@Html.DropDownList("departametos", new SelectList(strlist, strlist.FirstOrDefault()), "seleccione un departamento")
