@@ -20,11 +20,11 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var Departamentos in (IEnumerable<dynamic>)ViewData["listadoDepartamentos"])
+            @foreach (var covidcontext in (IEnumerable<dynamic>)ViewData["listadoDepartamentos"])
             {
                 <tr>
-                    <td>@Departamentos.Iddepartamento</td>
-                    <td>@Departamentos.nombreDepartamento</td>
+                    <td>@covidcontext.Iddepartamento</td>
+                    <td>@covidcontext.nombreDepartamento</td>
                 </tr>
             }
         </tbody>

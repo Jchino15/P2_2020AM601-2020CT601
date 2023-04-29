@@ -13,6 +13,10 @@ namespace P2_2020AM601_2020CT601.Controllers
 
             ViewData["listadoDepartamentos"] = new SelectList(listadoDepartamentos, "Iddepartamento", "nombreDepartamento");
 
+            var listadogeneros = (from d in _covidcontext.Departamentos select d).ToList();
+
+            ViewData["listadogeneros"] = new SelectList(listadoDepartamentos, "Iddepartamento", "nombreDepartamento")
+
             return View();
         }
     }
