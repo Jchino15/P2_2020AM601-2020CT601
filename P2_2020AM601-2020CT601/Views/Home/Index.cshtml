@@ -10,6 +10,7 @@
 <form asp-action="CasosReportados">
     <h3>Reportar Casos</h3>
     <div class="strList col-sm-4">
+        @Html.Label("lbldepartamento","Departamento")
         @Html.DropDownList("Iddepartamento", ViewData["listadoDepartamentos"] as SelectList, "Seleccione un departamento...", new {@class="form-control"})
     </div>
     <div class="strList col-sm-4">
