@@ -7,24 +7,61 @@
     <h2>El siguiente formulario es para llevar el registro de casos reportados de</h2>
     <h2>Covid por departamento y genero</h2>
 </div>
-<form>
+<form asp-action="CasosReportados">
     <h3>Reportar Casos</h3>
+    @{
+        IEnumerable<string> strList = new List<string> {};
+    }
     <div class="col-sm-4">
         @Html.DropDownList("Iddepartamento", ViewData["listadoDepartamentos"] as SelectList, "Seleccione un departamento...", new {@class="form-control"})
     </div>
+    <div class="form-group row mb-6">
+        <div class="col-sm-2">
+            <label>Casos confirmados</label>
+        </div>
+        <div class="col-sm-4">
+            @Html.TextBox("casos","",new{@class="form-control"})
+        </div>
+        <div class="col-sm-2">
+            @Html.Label("lblrecuperados", "Numero de recuperados")
+        </div>
+        <div class="col-sm-4">
+            @Html.TextArea("Recuperados", "", new { @class = "form-control"})
+        </div>
+        <div class="col-sm-2">
+            @Html.Label("lblfallecidos", "Numero de fallecidos")
+        </div>
+        <div class="col-sm-4">
+            @Html.TextArea("fallecidos", "", new { @class = "form-control"})
+        </div>
+    </div>
+    <div class="form-group row mb-4">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4>
+            <input type="submit" class="btn btn-prymary" value="Guardar" />
+        </div>
+    </div>
+    
     <table>
         <thead>
             <tr>
                 <th>Departamento</th>
-                <th>Nombre</th>
+                <th>Genero</th>
+                <th>Confirmados</th>
+                <th>Recuperados</th>
+                <th>Fallecidos</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var covidcontext in (IEnumerable<dynamic>)ViewData["listadoDepartamentos"])
             {
                 <tr>
-                    <td>@covidcontext.Iddepartamento</td>
                     <td>@covidcontext.nombreDepartamento</td>
+                    <td>@covidcontext.genero</td>
+                    <td>@covidcontext.confirmados</td>
+                    <td>@covidcontext.recuperados</td>
+                    <td>@covidcontext.fallecidos</td>
+                    
                 </tr>
             }
         </tbody>

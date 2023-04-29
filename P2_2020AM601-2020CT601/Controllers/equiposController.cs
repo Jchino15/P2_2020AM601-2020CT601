@@ -26,6 +26,13 @@ namespace P2_2020AM601_2020CT601.Controllers
 
             return View();
         }
+
+        public IActionResult CasosReportados(covidcontext nuevoCaso)
+        {
+            _covidcontext.Add(nuevoCaso);
+            _covidcontext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
     
