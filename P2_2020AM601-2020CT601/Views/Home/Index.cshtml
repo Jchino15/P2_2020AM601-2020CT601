@@ -20,11 +20,11 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var equipo in (IEnumerable<dynamic>)ViewData["listadoDepartamentos"])
+            @foreach (var Departamentos in (IEnumerable<dynamic>)ViewData["listadoDepartamentos"])
             {
                 <tr>
-                    <td>@equipo.Departamentos</td>
-                    <td>@equipo.Nombre</td>
+                    <td>@Departamentos.Iddepartamento</td>
+                    <td>@Departamentos.nombreDepartamento</td>
                 </tr>
             }
         </tbody>
